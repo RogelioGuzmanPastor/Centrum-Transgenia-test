@@ -73,6 +73,15 @@ $routes->resource('user', ['except' => ['show']]);
 $routes->get('/control', 'panelControl/Control::index');
 
 
+// ========================================================== //
+//    Ruta para news letter
+// ========================================================== //
+$routes->post('/register-newsletter', 'Newsletter::register');
+// ========================================================== //
+//    Ruta para Datos
+// ========================================================== //
+$routes->post('/register', 'Datos::register');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

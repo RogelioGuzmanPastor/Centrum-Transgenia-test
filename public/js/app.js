@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const botonesRango = document.getElementsByClassName('rango');
     const inputRango = document.getElementById('inputRango');
 
+    const formulario = document.getElementById('formulario');
+    const newsletter = document.getElementById('newsletter');
+    
 
     class MostrarContenido {
         static paginaSiguiente(pasoSolicitado){
@@ -137,5 +140,54 @@ document.addEventListener("DOMContentLoaded", function() {
             inputRango.value = this.dataset.rango;
         });
     }
+
+    formulario.addEventListener('submit',function(e){
+        e.preventDefault();
+        const datosFormulario = new FormData(formulario);
+        fetch('/register',{
+            method: 'POST',
+            body: datosFormulario
+        })
+            .then(res => res.json())
+            .then(data=> {
+                if(data.respuesta == 'exito'){
+                    let botonEnvio = document.getElementById('envioFormulario');                
+                    // botonEnvio.classList.add('disabled');
+                    botonEnvio.innerText = "Successful registration";
+                    
+                } else {
+                    let botonEnvio = document.getElementById('envioFormulario');
+                    botonEnvio.innerText = "Error, Reintente";
+                    
+                }
+                
+            })
+    });
+    newsletter.addEventListener('submit',function(e){        
+        e.preventDefault();
+        const datosNewsletter = new FormData(newsletter);
+        console.log(datosNewsletter.get('email'));
+        fetch('/register-newsletter',{
+            method: 'POST',
+            body: datosNewsletter
+        })
+            .then(res => res.json())
+            .then(data=> {
+                if(data.respuesta == 'exito'){
+                    let botonEnvio = document.getElementById('enviarNewsletter');
+                    let inputNewsletter = document.getElementById('inputNewsletter');
+
+                    botonEnvio.classList.add('disabled');
+                    botonEnvio.innerText = "Successful registration";
+                    inputNewsletter.value = "";
+                } else {
+                    let botonEnvio = document.getElementById('enviarNewsletter');
+                    botonEnvio.innerText = "Error, Reintente";
+                    
+                }
+                
+            })
+
+    });
 
 });

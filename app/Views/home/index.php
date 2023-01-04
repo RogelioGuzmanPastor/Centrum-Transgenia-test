@@ -27,7 +27,7 @@
                 <span>4</span>
             </div>
         </div>
-        <form action="/test" method="GET">
+        <form action="/register" id="formulario">
             <section class="contenido-pasos paso-1 active">
                 <header>
                     <h3>Contact details</h3>
@@ -216,7 +216,7 @@
                     <h4>Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.</h4>
                 </header>
                 <div class="enviar">
-                    <button type="submit" class="btn btn btn-brix-lg">Submit</button>
+                    <button type="submit" class="btn btn btn-brix-lg" id="envioFormulario">Submit</button>
                     <input type="hidden" id="google-response-token" name="google-response-token">
                 </div>
             </section>

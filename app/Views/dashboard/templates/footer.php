@@ -32,10 +32,10 @@
                 </div>
             </div>
             <div class="newsletter">
-                <form action="/newsletter" type="get">
-                    <input type="text" placeholder="Enter your email" name="email" id="inputNewsletter" class="input">
+                <form action="/register-newsletter" id="newsletter">
+                    <input type="email" placeholder="Enter your email" name="email" id="inputNewsletter" class="input">
                     <input type="hidden" id="google-response-token-2" name="google-response-token-2">
-                    <button type="submit" class="btn btn-brix">Subscribe</button>
+                    <button type="submit" class="btn btn-brix" id="enviarNewsletter">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -55,8 +55,8 @@
 <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script> -->
 
 <!-- <script src="/js/libs/plugins/mdtoast.min.js"></script>-->
-<!-- <script src="/js/app.js?n=1"></script>  -->
-<script src="/js/app.min.js?n=1"></script> 
+<script src="/js/app.js?n=1"></script> 
+<!-- <script src="/js/app.min.js?n=1"></script>  -->
 
 
 <?php if(isset($app)){echo $app;}; ?>
