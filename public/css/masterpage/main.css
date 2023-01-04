@@ -59,6 +59,17 @@
     background: rgba(74, 58, 255, 0.8);
     color: #fff; }
 
+.input {
+  border-radius: 60px;
+  border: #eff0f6;
+  box-shadow: 0 8px 25px rgba(13, 10, 44, 0.06);
+  padding: 15px;
+  transition: all 0.2s; }
+  .input:focus {
+    outline: 0 none;
+    border-color: #4a3aff;
+    box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7) inset, 0 0 8px rgba(74, 58, 255, 0.7); }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -154,13 +165,8 @@ footer#footer {
         justify-content: space-around;
         max-width: 100vw; }
         footer#footer .container .newsletter form input {
-          border-radius: 60px;
-          border: #eff0f6;
-          box-shadow: 0 8px 25px rgba(13, 10, 44, 0.06);
           max-width: 95%;
-          width: 50.7rem;
-          padding: 15px;
-          transition: all 0.2s; }
+          width: 50.7rem; }
           @media screen and (min-width: 768px) {
             footer#footer .container .newsletter form input {
               width: 40.7rem; } }
@@ -168,10 +174,6 @@ footer#footer {
             footer#footer .container .newsletter form input {
               width: 50.7rem;
               padding: 20px; } }
-          footer#footer .container .newsletter form input:focus {
-            outline: 0 none;
-            border-color: #4a3aff;
-            box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7) inset, 0 0 8px rgba(74, 58, 255, 0.7); }
         footer#footer .container .newsletter form button {
           position: absolute;
           top: 0;
@@ -220,7 +222,8 @@ footer#footer {
   border: 1px solid #eff0f6;
   box-shadow: 0 5px 16px rgba(8, 15, 52, 0.06);
   min-height: 30.6rem;
-  margin: 3rem auto 3.5rem auto; }
+  margin: 3rem auto 3.5rem auto;
+  padding-bottom: 2rem; }
   @media screen and (min-width: 768px) {
     #home-trasgenia .contenedor-pasos {
       margin: 6rem auto 3.5rem auto;
@@ -240,8 +243,8 @@ footer#footer {
         padding-bottom: 3rem; } }
     @media screen and (min-width: 992px) {
       #home-trasgenia .contenedor-pasos .progreso {
-        margin: 4rem auto;
-        padding-bottom: 4rem; } }
+        margin: 3.5rem auto;
+        padding-bottom: 3.5rem; } }
     #home-trasgenia .contenedor-pasos .progreso .numero {
       width: 2.8rem;
       height: 2.8rem;
@@ -276,6 +279,76 @@ footer#footer {
         height: 0.6rem;
         width: 0;
         border-radius: 3px; }
+  #home-trasgenia .contenedor-pasos .contenido-pasos {
+    max-width: 85%;
+    margin: 0 auto; }
+    #home-trasgenia .contenedor-pasos .contenido-pasos header h3 {
+      color: #170f49;
+      font-size: 2rem;
+      margin: 1rem 0 1rem 0; }
+      @media screen and (min-width: 576px) {
+        #home-trasgenia .contenedor-pasos .contenido-pasos header h3 {
+          font-size: 2.4rem;
+          margin: 2rem 0 1rem 0; } }
+      @media screen and (min-width: 768px) {
+        #home-trasgenia .contenedor-pasos .contenido-pasos header h3 {
+          margin: 3rem 0 1rem 0; } }
+      @media screen and (min-width: 992px) {
+        #home-trasgenia .contenedor-pasos .contenido-pasos header h3 {
+          margin: 4rem 0 1rem 0; } }
+      @media screen and (min-width: 1200px) {
+        #home-trasgenia .contenedor-pasos .contenido-pasos header h3 {
+          margin: 6.4rem 0 1rem 0; } }
+    #home-trasgenia .contenedor-pasos .contenido-pasos header h4 {
+      color: rgba(111, 108, 144, 0.8);
+      font-weight: normal;
+      font-size: 1.4rem;
+      margin-top: 0.5rem; }
+      @media screen and (min-width: 576px) {
+        #home-trasgenia .contenedor-pasos .contenido-pasos header h4 {
+          font-size: 1.8rem; } }
+  #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto div {
+    margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto div {
+        max-width: 47% !important;
+        margin: 0; } }
+  #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto label {
+    font-weight: bold;
+    margin: 2.2rem 0 1.8rem 0; }
+    @media screen and (min-width: 768px) {
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto label {
+        margin: 4.2rem 0 1.8rem 0; } }
+  #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
+    min-width: 100%;
+    position: relative; }
+    @media screen and (min-width: 576px) {
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
+        min-width: 65%; } }
+    @media screen and (min-width: 768px) {
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
+        min-width: 100%; } }
+    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form input {
+      width: 100%;
+      box-shadow: 0 2px 6px rgba(19, 18, 66, 0.07);
+      padding-left: 25px; }
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form input:focus {
+        outline: 0 none;
+        border-color: #4a3aff;
+        box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7) inset, 0 0 8px rgba(74, 58, 255, 0.7); }
+    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: auto;
+      right: 2rem;
+      margin: auto; }
+  #home-trasgenia .contenedor-pasos .paso-2 {
+    display: none; }
+  #home-trasgenia .contenedor-pasos .paso-3 {
+    display: none; }
+  #home-trasgenia .contenedor-pasos .paso-4 {
+    display: none; }
 #home-trasgenia .contenedor-botones {
   width: 95%;
   max-width: 70rem;
@@ -283,6 +356,9 @@ footer#footer {
   justify-content: space-between;
   margin: 0 auto 11rem auto; }
   #home-trasgenia .contenedor-botones a {
-    font-size: 1em; }
+    font-size: 1em;
+    transition: all 0.2s; }
+  #home-trasgenia .contenedor-botones a.off {
+    opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */

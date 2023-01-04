@@ -33,7 +33,7 @@
             </div>
             <div class="newsletter">
                 <form action="/newsletter">
-                    <input type="text" placeholder="Enter your email" id="inputNewsletter">
+                    <input type="text" placeholder="Enter your email" id="inputNewsletter" class="input">
                     <button type="submit" class="btn btn-brix">Subscribe</button>
                 </form>
             </div>
