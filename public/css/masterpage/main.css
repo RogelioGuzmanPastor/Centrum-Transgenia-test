@@ -500,10 +500,10 @@ footer#footer {
   display: flex;
   justify-content: space-between;
   margin: 0 auto 11rem auto; }
-  #home-trasgenia .contenedor-botones a {
+  #home-trasgenia .contenedor-botones button {
     font-size: 1em;
     transition: all 0.2s; }
-  #home-trasgenia .contenedor-botones a.off {
+  #home-trasgenia .contenedor-botones button.off {
     opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */

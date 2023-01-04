@@ -6,7 +6,10 @@ class Home extends BaseController
 {
 	public function index(){
 		$dataHeader = [
-			'metas' => '',
+			'metas' => '
+				<meta name="description" content="Formulario generado para prueba tecnica">
+				<meta name="keywords" content="prueba tecnica, centrum,transgenia, test">
+				<meta name="author" content="Rogelio Guzman Pastor">',
 			'title' => PROYECTNAME.' | index',
 			'recapcha' => '<script src="https://www.google.com/recaptcha/api.js?render='.RECAPCHAPUBLIC.'"></script>',
 			// 'css_asinc_font_mastercss' => 'media="print" onload="this.media=&apos;all&apos;"',

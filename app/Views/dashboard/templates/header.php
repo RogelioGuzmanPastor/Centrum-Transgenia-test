@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'"/>
 
     <!-- CSS General -->
-    <link rel="stylesheet" href="/css/masterpage/main.css" <?php if(isset($css_asinc_font_mastercss)){echo $css_asinc_font_mastercss;}; ?>>
+    <link rel="stylesheet" href="/css/masterpage/main.min.css" <?php if(isset($css_asinc_font_mastercss)){echo $css_asinc_font_mastercss;}; ?>>
     
     <!-- CSS recapcha -->
     <?php if(isset($recapcha)){echo $recapcha;}; ?>

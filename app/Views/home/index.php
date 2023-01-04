@@ -224,7 +224,7 @@
         </form>
     </section>
     <section class="contenedor-botones">
-        <a class="btn btn-brix-outline-lg off" data-step="0" id="botonAnterior">Previous step</a>
-        <a class="btn btn-brix-lg ml-auto" data-step="2" id="botonSiguiente">Next step</a>
+        <button class="btn btn-brix-outline-lg off" data-step="0" id="botonAnterior">Previous step</button>
+        <button class="btn btn-brix-lg ml-auto" data-step="2" id="botonSiguiente">Next step</button>
     </section>
 </main>
