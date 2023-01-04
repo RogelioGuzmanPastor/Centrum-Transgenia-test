@@ -28,7 +28,7 @@
             </div>
         </div>
         <form action="" method="POST">
-            <section class="contenido-pasos paso-1">
+            <section class="contenido-pasos paso-1 active">
                 <header>
                     <h3>Contact details</h3>
                     <h4>Lorem ipsum dolor sit amet consectetur adipisc.</h4>
@@ -116,7 +116,7 @@
         </form>
     </section>
     <section class="contenedor-botones">
-        <a class="btn btn-brix-outline-lg off" data-step="0">Previous step</a>
-        <a class="btn btn-brix-lg" data-step="1">Next step</a>
+        <a class="btn btn-brix-outline-lg off" data-step="0" id="botonAnterior">Previous step</a>
+        <a class="btn btn-brix-lg ml-auto" data-step="2" id="botonSiguiente">Next step</a>
     </section>
 </main>

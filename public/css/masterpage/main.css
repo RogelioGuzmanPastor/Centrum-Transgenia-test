@@ -89,6 +89,12 @@ body {
   font-size: 1.6rem;
   position: relative; }
 
+.fadeIn {
+  opacity: 1 !important; }
+
+.fadeOut {
+  opacity: 0 !important; }
+
 nav.navbar {
   height: 6.6rem; }
   @media screen and (min-width: 576px) {
@@ -281,7 +287,8 @@ footer#footer {
         border-radius: 3px; }
   #home-trasgenia .contenedor-pasos .contenido-pasos {
     max-width: 85%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transition: all 0.2s; }
     #home-trasgenia .contenedor-pasos .contenido-pasos header h3 {
       color: #170f49;
       font-size: 2rem;
@@ -307,48 +314,52 @@ footer#footer {
       @media screen and (min-width: 576px) {
         #home-trasgenia .contenedor-pasos .contenido-pasos header h4 {
           font-size: 1.8rem; } }
-  #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto div {
-    margin: 0 auto; }
-    @media screen and (min-width: 768px) {
-      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto div {
-        max-width: 47% !important;
-        margin: 0; } }
-  #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto label {
-    font-weight: bold;
-    margin: 2.2rem 0 1.8rem 0; }
-    @media screen and (min-width: 768px) {
-      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto label {
-        margin: 4.2rem 0 1.8rem 0; } }
-  #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
-    min-width: 100%;
-    position: relative; }
-    @media screen and (min-width: 576px) {
-      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
-        min-width: 65%; } }
-    @media screen and (min-width: 768px) {
-      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
-        min-width: 100%; } }
-    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form input {
-      width: 100%;
-      box-shadow: 0 2px 6px rgba(19, 18, 66, 0.07);
-      padding-left: 25px; }
-      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form input:focus {
-        outline: 0 none;
-        border-color: #4a3aff;
-        box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7) inset, 0 0 8px rgba(74, 58, 255, 0.7); }
-    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form svg {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: auto;
-      right: 2rem;
-      margin: auto; }
+  #home-trasgenia .contenedor-pasos .paso-1 {
+    display: none; }
+    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto div {
+      margin: 0 auto; }
+      @media screen and (min-width: 768px) {
+        #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto div {
+          max-width: 47% !important;
+          margin: 0; } }
+    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto label {
+      font-weight: bold;
+      margin: 2.2rem 0 1.8rem 0; }
+      @media screen and (min-width: 768px) {
+        #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto label {
+          margin: 4.2rem 0 1.8rem 0; } }
+    #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
+      min-width: 100%;
+      position: relative; }
+      @media screen and (min-width: 576px) {
+        #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
+          min-width: 65%; } }
+      @media screen and (min-width: 768px) {
+        #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form {
+          min-width: 100%; } }
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form input {
+        width: 100%;
+        box-shadow: 0 2px 6px rgba(19, 18, 66, 0.07);
+        padding-left: 25px; }
+        #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form input:focus {
+          outline: 0 none;
+          border-color: #4a3aff;
+          box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7) inset, 0 0 8px rgba(74, 58, 255, 0.7); }
+      #home-trasgenia .contenedor-pasos .paso-1 .informacion-contacto .input-form svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 2rem;
+        margin: auto; }
   #home-trasgenia .contenedor-pasos .paso-2 {
     display: none; }
   #home-trasgenia .contenedor-pasos .paso-3 {
     display: none; }
   #home-trasgenia .contenedor-pasos .paso-4 {
     display: none; }
+  #home-trasgenia .contenedor-pasos .contenido-pasos.active {
+    display: block !important; }
 #home-trasgenia .contenedor-botones {
   width: 95%;
   max-width: 70rem;

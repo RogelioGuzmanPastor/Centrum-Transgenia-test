@@ -88,6 +88,10 @@ html
 body
     font-size: 1.6rem
     position: relative
+.fadeIn
+    opacity: 1!important
+.fadeOut
+    opacity: 0!important
 // ========================================================== //
 //    Estilos navbar
 // ========================================================== //
@@ -276,10 +280,12 @@ footer#footer
                     background: rgba(74, 58, 255, 1)
                     height: 0.6rem
                     width: 0
-                    border-radius: 3px
+                    border-radius: 3px        
         .contenido-pasos
             max-width: 85%
             margin: 0 auto
+            // opacity: 0
+            transition: all 0.2s
             header
                 h3
                     color: rgba(23, 15, 73, 1)
@@ -303,7 +309,7 @@ footer#footer
                         font-size: 1.8rem
 
         .paso-1
-            // display: none
+            display: none        
             .informacion-contacto                
                 div 
                     margin: 0 auto
@@ -343,6 +349,9 @@ footer#footer
             display: none
         .paso-4
             display: none
+        .contenido-pasos.active
+            display: block!important            
+        
     .contenedor-botones
         width: 95%
         max-width: 70rem
@@ -351,6 +360,7 @@ footer#footer
         margin: 0 auto 11rem auto
         a
             font-size: 1em
-            transition: all 0.2s
+            transition: all 0.2s            
         a.off
             opacity: 0
+            // display: none
