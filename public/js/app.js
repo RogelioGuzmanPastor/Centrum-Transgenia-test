@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
     formulario.addEventListener('submit',function(e){
         e.preventDefault();
         const datosFormulario = new FormData(formulario);
-        fetch('/register',{
+        fetch('/register-data',{
             method: 'POST',
             body: datosFormulario
         })

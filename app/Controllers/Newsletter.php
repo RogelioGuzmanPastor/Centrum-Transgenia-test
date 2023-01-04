@@ -6,7 +6,36 @@ use App\Models\NewsletterModel;
 
 class Newsletter extends BaseController
 {
-	
+	public function index()
+    {
+        $dataHeader = [
+            'metas' => '',
+			'title' => PROYECTNAME.' | Registros Newsletter',
+            // "criticalcss"=>"",
+            // 'css_asinc_font_awesome' => 'media="print" onload="this.media=&apos;all&apos;"',
+            // 'css'=> '<link rel="stylesheet" href="/css/user/user.css"/>',
+            
+        ];
+        $usuario = new NewsletterModel();
+        $data = [
+            'usuarios' => $usuario->asObject()->paginate(18),
+            'pager' => $usuario->pager
+        ];
+        $dataFooter = [                      
+			// <script src='/js/app.js' defer></script>
+			// 'app' => '               
+			// ',
+		];	
+
+        // $this->_loadDefaultView($dataHeader, $data, 'index', []);
+
+        // ========================================================== //
+		//    path, pathTemplate, view, dataHeader, data, dataFooter
+		// ========================================================== //
+		$path = 'control/dashboard/Newsletter/';
+		$pathTemplate = 'control/dashboard/templates/';
+		_loadDefaultView($path, $pathTemplate, 'index', $dataHeader, $data, $dataFooter, false);
+    }
 	public function register()
 	{   
         if(isset($_POST['google-response-token-2'])){
@@ -58,5 +87,17 @@ class Newsletter extends BaseController
 
 		
 	}
+
+    public function delete($id = null){
+
+        $usuario = new NewsletterModel();       
+
+        if ($usuario->find($id) == null) {
+            throw PageNotFoundException::forPageNotFound();
+        }
+        $usuario->delete($id);
+        return redirect()->to('/control/newsletter')->with('message','Registro Borrado con Exito');
+        
+    }
 	
 }

@@ -121,6 +121,26 @@
               -->
          
           
+          <li class="nav-header">Datos</li>
+         
+          <li class="nav-item">
+             
+            <a href="/control/newsletter" class="nav-link">
+              <i class="nav-icon fas fa-user-edit"></i>
+              <p>
+               Registros newsletter 
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+             
+            <a href="/control/datos" class="nav-link">
+              <i class="nav-icon fas fa-user-edit"></i>
+              <p>
+               Registros datos
+              </p>
+            </a>
+          </li>
           <li class="nav-header">CONFIGURACION</li>
          
           <li class="nav-item">

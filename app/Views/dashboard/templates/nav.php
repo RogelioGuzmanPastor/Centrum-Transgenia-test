@@ -25,7 +25,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.16833 41.1028C9.40996 41.1028 12.0378 38.4749 12.0378 35.2333C12.0378 31.9916 9.40996 29.3638 6.16833 29.3638C2.92669 29.3638 0.298828 31.9916 0.298828 35.2333C0.298828 38.4749 2.92669 41.1028 6.16833 41.1028Z" fill="#4A3AFF"/>
             </svg>
         </a>
-        <a class="navbar-brand btn btn-brix-lg" href="/">Clone Now</a>
+        <a class="navbar-brand btn btn-brix-lg" href="/login">Login</a>
   
     
     </div>

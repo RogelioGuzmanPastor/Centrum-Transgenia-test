@@ -6,7 +6,36 @@ use App\Models\DatosModel;
 
 class Datos extends BaseController
 {
-	
+	public function index()
+    {
+        $dataHeader = [
+            'metas' => '',
+			'title' => PROYECTNAME.' | Registros Datos',
+            // "criticalcss"=>"",
+            // 'css_asinc_font_awesome' => 'media="print" onload="this.media=&apos;all&apos;"',
+            // 'css'=> '<link rel="stylesheet" href="/css/user/user.css"/>',
+            
+        ];
+        $usuario = new DatosModel();
+        $data = [
+            'usuarios' => $usuario->asObject()->paginate(18),
+            'pager' => $usuario->pager
+        ];
+        $dataFooter = [                      
+			// <script src='/js/app.js' defer></script>
+			// 'app' => '               
+			// ',
+		];	
+
+        // $this->_loadDefaultView($dataHeader, $data, 'index', []);
+
+        // ========================================================== //
+		//    path, pathTemplate, view, dataHeader, data, dataFooter
+		// ========================================================== //
+		$path = 'control/dashboard/Datos/';
+		$pathTemplate = 'control/dashboard/templates/';
+		_loadDefaultView($path, $pathTemplate, 'index', $dataHeader, $data, $dataFooter, false);
+    }
 	public function register()
 	{   
         if(isset($_POST['google-response-token']) ){
@@ -63,5 +92,16 @@ class Datos extends BaseController
 
 		
 	}
+    public function delete($id = null){
+
+        $usuario = new DatosModel();       
+
+        if ($usuario->find($id) == null) {
+            throw PageNotFoundException::forPageNotFound();
+        }
+        $usuario->delete($id);
+        return redirect()->to('/control/datos')->with('message','Registro Borrado con Exito');
+        
+    }
 	
 }

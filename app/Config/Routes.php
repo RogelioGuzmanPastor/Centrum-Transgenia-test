@@ -76,11 +76,15 @@ $routes->get('/control', 'panelControl/Control::index');
 // ========================================================== //
 //    Ruta para news letter
 // ========================================================== //
+$routes->resource('newsletter', ['except' => ['show']]);
 $routes->post('/register-newsletter', 'Newsletter::register');
+$routes->get('/control/newsletter', 'Newsletter::index');
 // ========================================================== //
 //    Ruta para Datos
 // ========================================================== //
-$routes->post('/register', 'Datos::register');
+$routes->resource('Datos', ['except' => ['show']]);
+$routes->post('/register-data', 'Datos::register');
+$routes->get('/control/datos', 'Datos::index');
 
 /*
  * --------------------------------------------------------------------
