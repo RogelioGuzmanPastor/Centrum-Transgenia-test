@@ -1,3 +1,6 @@
+.btn:active {
+  transform: scale(0.9); }
+
 .btn-brix {
   margin: 0;
   background: #4a3aff;
@@ -18,9 +21,9 @@
   color: #fff;
   font-weight: bold;
   box-shadow: 0 3px 12px rgba(74, 58, 255, 0.18);
-  padding: 10px 25px 10.5px 25px;
   border-radius: 56px;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  padding: 10px 25px 10.5px 25px; }
   @media screen and (min-width: 768px) {
     .btn-brix-lg {
       padding: 15px 37.5px 15.4px 37.5px; } }
@@ -36,9 +39,25 @@
 .btn-brix-outline-lg {
   margin: 0;
   border-radius: 56px;
-  padding: 20px 40px 21px 40px;
   border: solid 1px #4a3aff;
-  color: #4a3aff; }
+  color: #4a3aff;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px 10.5px 25px; }
+  @media screen and (min-width: 768px) {
+    .btn-brix-outline-lg {
+      padding: 15px 37.5px 15.4px 37.5px; } }
+  @media screen and (min-width: 1200px) {
+    .btn-brix-outline-lg {
+      padding: 20px 50px 21px 50px;
+      letter-spacing: 0.5px; } }
+  .btn-brix-outline-lg:hover {
+    box-shadow: 0 3px 12px rgba(74, 58, 255, 0.4);
+    border: 1px solid #fff;
+    background: rgba(74, 58, 255, 0.8);
+    color: #fff; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -161,5 +180,109 @@ footer#footer {
           right: 4%;
           margin: auto;
           max-height: 70%; }
+
+#home-trasgenia .header {
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #home-trasgenia .header h1 {
+    text-align: center;
+    color: #170f49;
+    font-size: 3.4rem;
+    margin-bottom: 1.7rem;
+    font-size: 1.6em;
+    margin-top: 2rem; }
+    @media screen and (min-width: 576px) {
+      #home-trasgenia .header h1 {
+        margin-top: 3rem;
+        font-size: 2em; } }
+    @media screen and (min-width: 768px) {
+      #home-trasgenia .header h1 {
+        margin-top: 4rem;
+        font-size: 3.4rem; } }
+  #home-trasgenia .header h2 {
+    text-align: center;
+    max-width: 57rem;
+    color: #6f6c90;
+    line-height: 1.8;
+    font-size: 0.8em;
+    width: 90%;
+    margin: 0 auto; }
+    @media screen and (min-width: 576px) {
+      #home-trasgenia .header h2 {
+        font-size: 1.8rem; } }
+#home-trasgenia .contenedor-pasos {
+  width: 95%;
+  max-width: 70rem;
+  border-radius: 34px;
+  border: 1px solid #eff0f6;
+  box-shadow: 0 5px 16px rgba(8, 15, 52, 0.06);
+  min-height: 30.6rem;
+  margin: 3rem auto 3.5rem auto; }
+  @media screen and (min-width: 768px) {
+    #home-trasgenia .contenedor-pasos {
+      margin: 6rem auto 3.5rem auto;
+      min-height: 60.6rem; } }
+  #home-trasgenia .contenedor-pasos .progreso {
+    display: flex;
+    max-width: 85%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9dbe9;
+    margin: 2rem auto 0 auto;
+    padding-bottom: 2rem; }
+    @media screen and (min-width: 576px) {
+      #home-trasgenia .contenedor-pasos .progreso {
+        margin: 3rem auto;
+        padding-bottom: 3rem; } }
+    @media screen and (min-width: 992px) {
+      #home-trasgenia .contenedor-pasos .progreso {
+        margin: 4rem auto;
+        padding-bottom: 4rem; } }
+    #home-trasgenia .contenedor-pasos .progreso .numero {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background: #eff0f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s; }
+      #home-trasgenia .contenedor-pasos .progreso .numero span {
+        color: #6f6c90; }
+      @media screen and (min-width: 576px) {
+        #home-trasgenia .contenedor-pasos .progreso .numero {
+          width: 3.4rem;
+          height: 3.4rem; } }
+    #home-trasgenia .contenedor-pasos .progreso .numero.active {
+      background: #4a3aff; }
+      #home-trasgenia .contenedor-pasos .progreso .numero.active span {
+        color: #fff; }
+    #home-trasgenia .contenedor-pasos .progreso .barra {
+      border-radius: 3px;
+      width: 10vw;
+      max-width: 10rem;
+      height: 0.6rem;
+      background: #eff0f6;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.2s; }
+      #home-trasgenia .contenedor-pasos .progreso .barra .relleno {
+        transition: all 0.2s;
+        background: #4a3aff;
+        height: 0.6rem;
+        width: 0;
+        border-radius: 3px; }
+#home-trasgenia .contenedor-botones {
+  width: 95%;
+  max-width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 11rem auto; }
+  #home-trasgenia .contenedor-botones a {
+    font-size: 1em; }
 
 /*# sourceMappingURL=main.css.map */
