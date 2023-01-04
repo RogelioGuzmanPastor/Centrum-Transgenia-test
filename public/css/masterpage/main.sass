@@ -137,12 +137,17 @@ footer#footer
                     box-shadow: 0 8px 25px rgba(13, 10, 44, 0.06)
                     max-width: 95%
                     width: 50.7rem                
-                    padding: 15px                    
+                    padding: 15px      
+                    transition: all 0.2s              
                     @media screen and ( min-width: 768px )
                         width: 40.7rem                
                     @media screen and ( min-width: 992px )
                         width: 50.7rem                
                         padding: 20px
+                    &:focus
+                        outline: 0 none
+                        border-color: rgb(74, 58, 255)
+                        box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7)inset, 0 0 8px rgba(74, 58, 255, 0.7)
                 button
                     position: absolute
                     top: 0
@@ -151,3 +156,11 @@ footer#footer
                     right: 4%
                     margin: auto
                     max-height: 70%
+
+// ========================================================== //
+//    Estilos home
+// ========================================================== //
+
+#home-trasgenia
+    .header
+        h1  

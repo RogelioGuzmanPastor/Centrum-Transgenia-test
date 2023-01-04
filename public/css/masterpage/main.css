@@ -140,7 +140,8 @@ footer#footer {
           box-shadow: 0 8px 25px rgba(13, 10, 44, 0.06);
           max-width: 95%;
           width: 50.7rem;
-          padding: 15px; }
+          padding: 15px;
+          transition: all 0.2s; }
           @media screen and (min-width: 768px) {
             footer#footer .container .newsletter form input {
               width: 40.7rem; } }
@@ -148,6 +149,10 @@ footer#footer {
             footer#footer .container .newsletter form input {
               width: 50.7rem;
               padding: 20px; } }
+          footer#footer .container .newsletter form input:focus {
+            outline: 0 none;
+            border-color: #4a3aff;
+            box-shadow: 0 1px 1px rgba(74, 58, 255, 0.7) inset, 0 0 8px rgba(74, 58, 255, 0.7); }
         footer#footer .container .newsletter form button {
           position: absolute;
           top: 0;
