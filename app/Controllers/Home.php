@@ -8,10 +8,10 @@ class Home extends BaseController
 		$dataHeader = [
 			'metas' => '',
 			'title' => PROYECTNAME.' | index',
-			'recapcha' => '<script src=&quot;https://www.google.com/recaptcha/api.js?render='.RECAPCHAPUBLIC.'&quot;></script>',
-			// 'css_asinc_font_mastercss' => 'media=&quot;print&quot; onload=&quot;this.media=&apos;all&apos;&quot;',
+			'recapcha' => '<script src="https://www.google.com/recaptcha/api.js?render='.RECAPCHAPUBLIC.'"></script>',
+			// 'css_asinc_font_mastercss' => 'media="print" onload="this.media=&apos;all&apos;"',
 			// 'criticalcss'=>'<style>body{padding: 0!important}</style>',
-			// 'css'=> '<link rel=&quot;stylesheet&quot; href=&quot;/css//.css&quot;>'
+			// 'css'=> '<link rel="stylesheet" href="/css//.css">'
 		];
 		$data = [
 			// 
@@ -28,7 +28,7 @@ class Home extends BaseController
 		// ========================================================== //
 		$path = '/home/';
 		$pathTemplate = '/dashboard/templates/';
-		_loadDefaultView($path, $pathTemplate, 'index', $dataHeader, $data, $dataFooter, true);
+		_loadDefaultView($path, $pathTemplate, 'index', $dataHeader, $data, $dataFooter, false);
 	}
 	function image($recurso = null, $image = null){
 
