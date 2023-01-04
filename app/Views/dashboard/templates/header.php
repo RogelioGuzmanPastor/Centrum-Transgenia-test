@@ -12,10 +12,10 @@
     <title><?php if(isset($title)){echo $title;}else{echo "title";}; ?></title>    
 
 
-    <meta name="robots" content="noindex">
+    <!-- <meta name="robots" content="noindex">
 
     <meta name="googlebot" content="noindex">
-    
+     -->
     
     <!-- LOCAL: Font Awesome -->
     <!-- <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css" media="print" onload="this.media='all'" >     -->
