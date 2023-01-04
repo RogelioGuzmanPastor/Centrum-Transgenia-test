@@ -34,6 +34,7 @@
             <div class="newsletter">
                 <form action="/newsletter">
                     <input type="text" placeholder="Enter your email" id="inputNewsletter" class="input">
+                    <input type="hidden" id="google-response-token-2" name="google-response-token-2">
                     <button type="submit" class="btn btn-brix">Subscribe</button>
                 </form>
             </div>

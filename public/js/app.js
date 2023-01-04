@@ -1,15 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // botones de accion para mostrar paginas
     const botonSiguiente = document.getElementById('botonSiguiente');
     const botonAnterior = document.getElementById('botonAnterior');
+
     const contenedoresPasos = document.getElementsByClassName('contenido-pasos');
     const circulosNumeros = document.getElementsByClassName('numero');    
     const rellenosBarras = document.getElementsByClassName('relleno');    
+    
+    // botones de servicios 
+    const botonesServicios = document.getElementsByClassName('servicio');
+    const inputServicio = document.getElementById('inputServicio');
+    // botones de rangos 
+    const botonesRango = document.getElementsByClassName('rango');
+    const inputRango = document.getElementById('inputRango');
+
 
     class MostrarContenido {
         static paginaSiguiente(pasoSolicitado){
             if(pasoSolicitado <= 4){                                
                 if(pasoSolicitado == 2){MostrarContenido.mostrarRegresar()};
-                if(pasoSolicitado == 4){MostrarContenido.deshabilitarSiguiente()};
+                if(pasoSolicitado == contenedoresPasos.length){MostrarContenido.deshabilitarSiguiente()};
                 MostrarContenido.ocultarPresentar(pasoSolicitado)
                 MostrarContenido.activarSiguienteNumeroBarra(pasoSolicitado);                
                 pasoSolicitado++; 
@@ -79,18 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function(){
                 circulosNumeros[numero].classList.add('active');                
                 setTimeout(function(){                       
-                    if(numero < 3){
+                    if(numero < rellenosBarras.length){
                         rellenosBarras[numero].style.width = "50%";                    
                     }
                 },200);
             },200);
         }
-        static regresarNumeroBarra(pasoSolicitado){
-            console.log(pasoSolicitado);
+        static regresarNumeroBarra(pasoSolicitado){            
             let numero;
             isNaN(pasoSolicitado)?numero = pasoSolicitado:numero = parseInt(pasoSolicitado);   
             
-            if(numero < 3){
+            if(numero < rellenosBarras.length){
                 rellenosBarras[numero].style.width = "0%"; 
             }
             setTimeout(function(){
@@ -100,28 +109,33 @@ document.addEventListener("DOMContentLoaded", function() {
                     rellenosBarras[numero].style.width = "50%";                                        
                 },200);
             },200);
-
-            // rellenosBarras[numero].style.width = "100%";            
-            // numero++;
-            // setTimeout(function(){
-            //     circulosNumeros[numero].classList.add('active');                
-            //     setTimeout(function(){                       
-            //         if(numero < 3){
-            //             rellenosBarras[numero].style.width = "50%";                    
-            //         }
-            //     },200);
-            // },200);
         }
     }
     
-    
-
     botonSiguiente.addEventListener('click', function(){        
         MostrarContenido.paginaSiguiente(this.dataset.step)
     });
     botonAnterior.addEventListener('click', function(){        
         MostrarContenido.paginaAnterior(this.dataset.step)        
     });
-
+        
+    for (let index = 0; index < botonesServicios.length; index++) {        
+        botonesServicios[index].addEventListener('click', function(){                           
+            for (let index = 0; index < botonesServicios.length; index++) {
+                botonesServicios[index].classList.remove('active');
+            }
+            this.classList.add('active');            
+            inputServicio.value = this.dataset.servicio;
+        });
+    }
+    for (let index = 0; index < botonesRango.length; index++) {        
+        botonesRango[index].addEventListener('click', function(){                           
+            for (let index = 0; index < botonesRango.length; index++) {
+                botonesRango[index].classList.remove('active');
+            }
+            this.classList.add('active');            
+            inputRango.value = this.dataset.rango;
+        });
+    }
 
 });

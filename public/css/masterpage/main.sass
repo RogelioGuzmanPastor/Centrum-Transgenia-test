@@ -227,10 +227,13 @@ footer#footer
         border-radius: 34px
         border: 1px solid rgba(239, 240, 246, 1)
         box-shadow: 0 5px 16px rgba(8, 15, 52, 0.06)
-        min-height: 30.6rem
         margin: 3rem auto 3.5rem auto
         padding-bottom: 2rem
+        min-height: 63.3rem
+        @media screen and ( min-width: 576px )
+            min-height: 60rem
         @media screen and ( min-width: 768px )
+            min-height: 30.6rem
             margin: 6rem auto 3.5rem auto
             min-height: 60.6rem
         .progreso            
@@ -285,6 +288,7 @@ footer#footer
             max-width: 85%
             margin: 0 auto
             // opacity: 0
+            display: none
             transition: all 0.2s
             header
                 h3
@@ -309,7 +313,6 @@ footer#footer
                         font-size: 1.8rem
 
         .paso-1
-            display: none        
             .informacion-contacto                
                 div 
                     margin: 0 auto
@@ -344,11 +347,146 @@ footer#footer
                         right: 2rem
                         margin: auto
         .paso-2
-            display: none
+            header
+                h4
+                    margin-bottom: 4rem
+            .servicio-interes
+                .servicio
+                    display: flex
+                    align-items: center
+                    border: 1px solid rgba(239, 240, 246, 1)
+                    box-shadow: 0 2px 6px rgba(19, 18, 66, 0.07)
+                    border-radius: 16px
+                    margin-bottom: 2.2rem
+                    cursor: pointer
+                    transition: all 0.2s
+                    width: 90%
+                    height: 8.4rem
+                    @media screen and ( min-width: 576px )
+                        padding: 1.7rem
+                        height: 9.4rem
+                        max-width: 48%
+                        margin-bottom: 4rem
+                        margin-top: 3rem
+                    @media screen and ( min-width: 768px )
+                        margin-top: 0
+                        margin-bottom: 2.2rem
+                        max-width: 28.4rem
+                        height: 11.4rem
+                        padding: 2.4rem
+                    .icono
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: 50%
+                        width: 5.6rem
+                        height: 5.6rem
+                        background: rgba(74, 58, 255, 0.2)
+                        @media screen and ( min-width: 768px )
+                            width: 6.6rem
+                            height: 6.6rem
+                    p
+                        margin: 0
+                        font-weight: bold
+                        font-size: 1.6rem
+                        padding-left: 1.2rem
+                        @media screen and ( min-width: 768px )
+                            font-size: 1.8rem
+                    &:active
+                        transform: scale(0.9)
+                .servicio.active
+                    border: 2px solid rgba(74, 58, 255, 1)    
+                
         .paso-3
-            display: none
+            header
+                h4
+                    margin-bottom: 4rem
+            .rango-interes
+                .rango
+                    width: 90%
+                    display: flex
+                    align-items: center
+                    border: 1px solid rgba(239, 240, 246, 1)
+                    box-shadow: 0 2px 6px rgba(19, 18, 66, 0.07)
+                    border-radius: 16px
+                    margin-bottom: 2.2rem
+                    cursor: pointer
+                    transition: all 0.2s
+                    height: 8.4rem
+                    @media screen and ( min-width: 576px )
+                        padding: 1.7rem
+                        height: 9.4rem
+                        max-width: 48%
+                        margin-bottom: 4rem
+                        margin-top: 3rem
+                    @media screen and ( min-width: 768px )
+                        margin-top: 0
+                        margin-bottom: 2.2rem
+                        max-width: 28.4rem
+                        height: 11.4rem
+                        padding: 2.4rem
+                    .icono
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: 50%
+                        width: 2.5rem
+                        height: 2.5rem
+                        // background: rgba(74, 58, 255, 0.2)
+                        border: 1.2px solid rgba(217, 219, 233, 1)
+                        transition: all 0.2s
+                        position: relative
+                        .interior
+                            position: absolute
+                            top: 0
+                            left: 0
+                            right: 0
+                            bottom: 0
+                            margin: 0
+                            margin: auto
+                            border-radius: 50%
+                            background: #fff
+                            width: 40%
+                            height: 40%
+
+
+                    p
+                        margin: 0
+                        font-weight: bold
+                        font-size: 1.6rem
+                        padding-left: 1.2rem
+                        @media screen and ( min-width: 768px )
+                            font-size: 1.8rem
+                    &:active
+                        transform: scale(0.9)
+                        
+                .rango.active
+                    border: 2px solid rgba(74, 58, 255, 1)   
+                    .icono
+                        background: rgba(74, 58, 255, 1)
         .paso-4
-            display: none
+            h3
+                color: rgba(23, 15, 73, 1)
+                font-size: 2rem
+                margin: 1rem 0 1rem 0
+                text-align: center
+                @media screen and ( min-width: 576px )
+                    font-size: 2.4rem
+                    margin: 2rem 0 1rem 0!important       
+            h4
+                width: 90%
+                max-width: 50rem
+                margin: 0 auto
+                text-align: center   
+                line-height: 1.6      
+                color: rgba(111, 108, 144, 1)
+            .ready-image
+                margin-top: 4rem
+            .enviar
+                margin: 3rem auto
+                text-align: center                
+                button
+                    font-size: 1em
         .contenido-pasos.active
             display: block!important            
         

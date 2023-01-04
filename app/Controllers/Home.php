@@ -18,8 +18,19 @@ class Home extends BaseController
 		];        
 		$dataFooter = [                      
 			// <script src='/js/app.js' defer></script>
-			// 'app' => '               
-			// ',
+			'js' => '            
+            <script>
+                grecaptcha.ready(function() {
+                    grecaptcha.execute("'.RECAPCHAPUBLIC.'", {action: "homepage"})
+                    .then(function(token) {                        
+						let inputRecaptcha = document.getElementById("google-response-token");
+                        inputRecaptcha.value = token;
+						let inputRecaptcha2 = document.getElementById("google-response-token-2");
+                        inputRecaptcha2.value = token;
+                    });
+                });
+                
+            </script>',
 		];	
 		
 		
