@@ -1,3 +1,3 @@
-<main style="min-height: 100vh;">
+<main style="min-height: 80vh;">
 
 </main>
